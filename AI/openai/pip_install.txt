@@ -1,0 +1,5 @@
+# install in python virtual-environment
+
+pip install openai
+
+pip install python-dotenv
