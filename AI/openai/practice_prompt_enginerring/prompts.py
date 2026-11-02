@@ -1,13 +1,31 @@
 from openai import OpenAI  # must install openai package
 import os
-
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+dotenv_path = Path("C:\\AKD\\workplace\\AIEngineerBootcamp\\.venv\\.env")
+load_dotenv(dotenv_path=dotenv_path)
 
 client = OpenAI()
 
 model = "gpt-4o-mini"
+
+#specific promt for better result
+response = client.chat.completions.create(
+    model=model,
+    messages=[
+        {"role": "system", "content": "You are a eastern poet."},
+        {
+            "role": "user",
+            "content": """write me a short poem about the moon. 
+               Write the poem in the style of a haiku.
+               Make sure include a title for the poem.""",
+        },
+    ],
+)
+
+print(response.choices[0].message.content)
+
 # == few-shot learning
 completion = client.chat.completions.create(
     model=model,
