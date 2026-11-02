@@ -1,3 +1,5 @@
 # install in python virtual-environment
 
 pip install requests
+
+pip install ollama
