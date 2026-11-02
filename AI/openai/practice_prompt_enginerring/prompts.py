@@ -8,7 +8,8 @@ load_dotenv(dotenv_path=dotenv_path)
 
 client = OpenAI()
 
-model = "gpt-4o-mini"
+#model = "gpt-4o-mini"
+model = "gpt-5-nano"
 
 #specific promt for better result
 response = client.chat.completions.create(
@@ -24,7 +25,7 @@ response = client.chat.completions.create(
     ],
 )
 
-print(response.choices[0].message.content)
+#print(response.choices[0].message.content)
 
 # == few-shot learning
 completion = client.chat.completions.create(
