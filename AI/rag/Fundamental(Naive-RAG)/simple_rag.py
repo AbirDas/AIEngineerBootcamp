@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-root_path = str(Path(__file__).resolve().parent.parent.parent)
+root_path = str(Path(__file__).resolve().parent.parent.parent.parent)
 env_path = root_path + "\\.venv\\.env"
 load_dotenv(env_path)
 
