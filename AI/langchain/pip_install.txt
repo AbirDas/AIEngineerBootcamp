@@ -1,0 +1,7 @@
+# install in python virtual-environment
+
+pip install -U langchain
+
+pip install langchain-ollama
+
+faiss-cpu
