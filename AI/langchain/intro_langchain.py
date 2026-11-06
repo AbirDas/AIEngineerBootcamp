@@ -5,12 +5,12 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from dotenv import load_dotenv
 from pathlib import Path
 
-# get path of env file
-path_root = str(Path(__file__).resolve().parent.parent.parent)
-path_env = path_root + "\\.venv\\.env"
+# get path of env file for OpenAI
+#path_root = str(Path(__file__).resolve().parent.parent.parent)
+#path_env = path_root + "\\.venv\\.env"
 
 #load environmmnet variable
-load_dotenv(path_env)
+#load_dotenv(path_env)
 
 model = init_chat_model(
     model="llama3.2",
