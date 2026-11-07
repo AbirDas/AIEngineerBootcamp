@@ -11,6 +11,7 @@ selenium
 newspaper3k
 lxml-html-clean 
 langchain-ollama
+langchain-chroma
 yt_dlp
 
 # for voice assistant RAG workflow
